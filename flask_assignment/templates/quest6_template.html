@@ -8,14 +8,13 @@
     </head>
     <body>
         <h1>Flask File Uploads Tutorial</h1>
-    
+        <!-- <img src="../uploads/mango.jpeg"  width="700" height="400"> -->
         <form action="/show" method='POST' enctype='multipart/form-data'>
             <label for="myfile">Select a file:</label>
-            <input type="file" id="file" name="file1"><br>
+            <input type="file" id="file1" name="file1"><br>
             <input type="submit" value = "submit">
             
         </form>
-        <!-- <img src="mango.jpg"  width="700" height="400"> -->
         <p>
             {% with messages = get_flashed_messages() %}
               {% if messages %}

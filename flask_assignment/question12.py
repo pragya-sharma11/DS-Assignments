@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 12. Build a Flask app that updates data in real-time using WebSocket connections.
 
 from flask import * 
 app = Flask(__name__)

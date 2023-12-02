@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 11. Create a real-time chat application using Flask-SocketIO.
 
 from flask import * 
 app = Flask(__name__)

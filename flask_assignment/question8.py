@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 8. Implement user authentication and registration in a Flask app using Flask-Login.
 
 from flask import * 
 app = Flask(__name__)

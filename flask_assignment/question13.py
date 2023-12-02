@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 13. Implement notifications in a Flask app using websockets to notify users of updates.
 
 from flask import * 
 app = Flask(__name__)

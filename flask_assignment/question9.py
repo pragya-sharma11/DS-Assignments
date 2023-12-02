@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 9. Create a RESTful API using Flask to perform CRUD operations on resources like books or movies.
 
 from flask import * 
 app = Flask(__name__)

@@ -1,4 +1,4 @@
-# 7. Integrate a SQLite database with Flask to perform CRUD operations on a list of items.
+# 10. Design a Flask app with proper error handling for 404 and 500 errors.
 
 from flask import * 
 app = Flask(__name__)
