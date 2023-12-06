@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <title>Database Operations</title>
+    <style>
+                
+      </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <td>Emp_id</td>
+            <td>Name</td>
+            <td>City</td>
+            <td>Country</td>
+        </thead>
+        {% for i in rows %}
+            <tr>
+                <td>{{i['e_id']}}</td>
+                <td>{{i['name']}}</td>
+                <td>{{i['city']}}</td>
+                <td>{{i['country']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    <a href="/">Go to home page</a>
+</body>
+</html>
