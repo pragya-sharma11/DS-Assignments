@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="padding: 10px;">
+        <div class="row justify-content-center">
+            <span style="font-weight: 800; font-size: 30px; color: rgb(25, 41, 159);">Books Record </span>
+            <button type="button" class="btn btn-success" style="float: right; margin-top: 5px; width: 150px;"
+            onclick="window.location = '/add_rec'"
+            >Add Book</button>
+        </div>
+        <div class="row justify-content-center">
+            <table class="table table-bordered " >
+                <thead class="bg-primary">
+                  <tr>
+                    <!-- <th scope="col">#</th>
+                    <th scope="col">First</th> -->
+                    <th scope="col">Book_id</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Book</th>
+                    <th scope="col">Operation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for i in rows %}
+                    <tr>
+                        <td>{{i['BOOK_ID']}}</td>
+                        <td>{{i['AUTHOR']}}</td>
+                        <td>{{i['BOOK_NAME']}}</td>
+                        <td>
+                            <span style="font-size: 24px;">
+                                <a href="/{{i.BOOK_ID}}/update"><i class="fas fa-edit"></i></a>
+                            </span>
+                            <span style="font-size: 24px;">
+                                <a href="/{{i.BOOK_ID}}/delete"><i style="color: rgb(196, 3, 48)" class="fa-solid fa-trash"></i></a>
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login</title>
+  <title>Add Book</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,18 +12,20 @@
     <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-6">
-              <h2>Login</h2>
-              <form action="/login" method="POST">
+              <h2>Add Book</h2>
+              <form action="/insertion" method="POST">
+                  
                   <div class="form-group">
-                    <label for="username">username:<span class="text-danger">*</span></label>
-                    <input type="username" class="form-control" id="username" placeholder="Enter username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="password">Password:<span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                  <label for="book_id">book_id:<span class="text-danger">*</span></label>
+                  <input type="book_id" class="form-control" id="book_id" placeholder="Enter book_id" name="book_id" required>
                   </div>
-                  <div class="checkbox">
-                  <label><input type="checkbox" name="remember"> Remember me</label>
+                  <div class="form-group">
+                  <label for="author">author name:<span class="text-danger">*</span></label>
+                  <input type="author" class="form-control" id="author" placeholder="Enter author name" name="author" required>
+                  </div>
+                  <div class="form-group">
+                  <label for="book">book title:<span class="text-danger">*</span></label>
+                  <input type="book" class="form-control" id="book" placeholder="Enter book title" name="book" required>
                   </div>
                   <button type="submit" class="btn bg-primary text-white">Submit</button>
               </form>
@@ -34,11 +36,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6">
-              Don't have an account? <a href="/register_user">Create account.</a>
+              <a href="/">Back to home page.</a>
             </div>
         </div>
     </div>
-
 
 </body>
 </html>
