@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/join_room" method="post" class="buttons">
+    <h1>Enter the chatroom</h1>
+    <div>
+        <label for="name">Enter name:</label>
+        <input type="text" id="name" name="name" placeholder = 'Your name!!' value="{{name}}"><br><br>
+    </div>
+
+    <div class="join">
+        <label for="code">Enter code:</label>
+        <input type="text" id="code" name="code" placeholder = 'Room code!!' value="{{code}}"><br><br>
+        <button type="submit" name="join" >Enter the room</button>
+    </div>
+    <p style="color: rgb(201, 42, 42);">{{error}}</p>
+    <button type="submit" name="create" class="create-btn">Create the room</button>
+</form>
+{% endblock %}
