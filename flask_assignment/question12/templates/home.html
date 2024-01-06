@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" 
+    integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" 
+    crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Counter : <span id="counter">{{data.counter}}</span></h3>
+</body>
+<script type="text/javascript">
+    var socketio = io()
+    socketio.on('user', function(json){
+        console.log('users')
+        $('#counter').text(json.counter)
+    })
+    socketio.on('connect', function(){
+        console.log('connect')
+    })
+    socketio.on('disconnect', function(){
+        console.log('disconnect')
+    })
+</script>
+</html>
